@@ -1,6 +1,6 @@
 # ! /bin/bash
 docker run -it -p 8080:8080 \
--v dags:/opt/airflow/dags \
+-v /Users/lsy/workspace/DE/Airflow-tutorial/dags:/opt/airflow/dags \
 --entrypoint /bin/bash \
 --name airflow \
 apache/airflow \
