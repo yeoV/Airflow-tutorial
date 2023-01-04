@@ -3,7 +3,12 @@ import datetime as dt
 from airflow import DAG
 from airflow.operators.bash import BashOperator
 
-dag = DAG()
+dag = DAG(
+    dag_id="04_query_with_dates",
+    schedule_interval=dt.timedelta(2),
+    start_date=dt.datetime(2023, 1, 3),
+    end_date=dt.datetime(2023, 1, 7),
+)
 
 
 fetch_events = BashOperator(
